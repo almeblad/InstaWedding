@@ -1,3 +1,25 @@
-body {
-	background-color:#b0c4de;
+
+
+.profile_picture {
+border:2px solid #2980B9;
+width:35px;
+height: 35px;
+border-radius:25px;
+float: left;
+margin-right: 5px;
+}
+
+#picture {
+	float: left;
+	margin-right: 20px;
+}
+
+.info{
+	float: left;
+	margin: 0 10px 0 0px;
+} 
+
+#instafeed #picture img {
+	width: 500px;
+	height: 500px;
 }
