@@ -13,10 +13,10 @@
     <!-- Loading Flat UI -->
     <link href="css/flat-ui.css" rel="stylesheet">
     <link href="css/demo.css" rel="stylesheet">
-	
+
 	<!-- Loading own css -->
     <link href="css/style.css" rel="stylesheet">
-    
+
     <link rel="shortcut icon" href="images/favicon.ico">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
@@ -29,18 +29,18 @@
 	var firstImage = true;
     var feed = new Instafeed({
         get: 'tagged',
-        tagName: 'umeå',
+        tagName: 'mandaojonas',
         clientId: '3746afb599d04d67aed835c7e28fe751',
         limit: '60',
         sortBy: 'random',
-		useHttp: true,
-		filter: function (image) {
-			if (firstImage === true) {
-				firstImage = false;
-				return true;
-			} else {
-				return false;
-			}
+		    useHttp: true,
+		    filter: function (image) {
+			       if (firstImage === true) {
+				           firstImage = false;
+				           return true;
+			       } else {
+				           return false;
+			       }
 		},
         resolution: 'standard_resolution', //'standard_resolution',
 		template: '<div class="wrapper">'+
@@ -55,11 +55,11 @@
     });
     feed.run();
 	</script>
-	
+
 	<script type="text/javascript">
-    setTimeout(function () { 
+    setTimeout(function () {
       location.reload();
-    }, 900000);
+    }, 17000);
 </script>
   </head>
   <body>
@@ -67,9 +67,9 @@
     	<h1>Bröllopsbilder - #mandaojonas</h1>
     	<h4>31/5 2014</h4>
     	<div id="instafeed"></div>
-    	
+
     </div>
-    
+
     <!-- Load JS here for greater good =============================-->
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
