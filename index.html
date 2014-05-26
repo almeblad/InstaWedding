@@ -28,16 +28,23 @@
     	<script type="text/javascript">
     var feed = new Instafeed({
         get: 'tagged',
-        tagName: 'spring',
+        tagName: 'umeå',
         clientId: '3746afb599d04d67aed835c7e28fe751',
-        limit: '1',
+        limit: '60',
         sortBy: 'random',
+		after: function () {
+			var wrappers = $('#wrapper');
+			$(wrappers.slice(1, wrappers.length)).remove();
+		},
         resolution: 'standard_resolution', //'standard_resolution',
-		template: '<div id="picture"><a href="{{link}}"><img class="img-rounded img-responsive" src="{{image}}" /></a></div>' +
+		template: '<div id="wrapper">'+
+		'<div id="picture"><a href="{{link}}"><img class="img-rounded img-responsive" src="{{image}}" /></a></div>' +
 		'<div id="pic_info">'+
 		'<img class="profile_picture img-responsive" src="{{model.user.profile_picture}}" /><h6>{{model.user.username}}</h6> <br/><div id="caption"><p>{{caption}}</p> <br/>'+
 		'<div class="info">{{likes}}  <span class="fui-heart"></span></div>' +
 		'<div class="info">{{comments}}  <span class="fui-chat"></span></div> <br/>'+
+		'</div>'+
+		'</div>'+
 		'</div>'
     });
     feed.run();
@@ -46,12 +53,12 @@
 	<script type="text/javascript">
     setTimeout(function () { 
       location.reload();
-    }, 10000);
+    }, 900000);
 </script>
   </head>
   <body>
     <div class="container">
-    	<h1>Bröllopsbilder - #mandaochjonas</h1>
+    	<h1>Bröllopsbilder - #mandaojonas</h1>
     	<h4>31/5 2014</h4>
     	<div id="instafeed"></div>
     	
