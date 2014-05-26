@@ -33,11 +33,11 @@
         limit: '60',
         sortBy: 'random',
 		after: function () {
-			var wrappers = $('#wrapper');
+			var wrappers = $('.wrapper');
 			$(wrappers.slice(1, wrappers.length)).remove();
 		},
         resolution: 'standard_resolution', //'standard_resolution',
-		template: '<div id="wrapper">'+
+		template: '<div class="wrapper">'+
 		'<div id="picture"><a href="{{link}}"><img class="img-rounded img-responsive" src="{{image}}" /></a></div>' +
 		'<div id="pic_info">'+
 		'<img class="profile_picture img-responsive" src="{{model.user.profile_picture}}" /><h6>{{model.user.username}}</h6> <br/><div id="caption"><p>{{caption}}</p> <br/>'+
