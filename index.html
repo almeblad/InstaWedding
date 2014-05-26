@@ -26,15 +26,21 @@
     <![endif]-->
     <script language="javascript" type="text/javascript" src="js/instafeed.min.js"></script>
     	<script type="text/javascript">
+	var firstImage = true;
     var feed = new Instafeed({
         get: 'tagged',
         tagName: 'umeå',
         clientId: '3746afb599d04d67aed835c7e28fe751',
         limit: '60',
         sortBy: 'random',
-		after: function () {
-			var wrappers = $('.wrapper');
-			$(wrappers.slice(1, wrappers.length)).remove();
+		useHttp: true,
+		filter: function (image) {
+			if (firstImage === true) {
+				firstImage = false;
+				return true;
+			} else {
+				return false;
+			}
 		},
         resolution: 'standard_resolution', //'standard_resolution',
 		template: '<div class="wrapper">'+
