@@ -24,11 +24,14 @@
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
+	<script src="js/parameters.js"></script>
     <script language="javascript" type="text/javascript" src="js/instafeed.min.js"></script>
     	<script type="text/javascript">
+	var parameter = getUrlParameters("accessToken", "", true);
     var feed = new Instafeed({
         get: 'tagged',
-        tagName: 'umeå',
+        tagName: 'mandaojonas',
+		accessToken: parameter,
         clientId: '3746afb599d04d67aed835c7e28fe751',
         limit: '60',
         sortBy: 'random',
@@ -53,7 +56,7 @@
 	<script type="text/javascript">
     setTimeout(function () { 
       location.reload();
-    }, 900000);
+    }, 15000);
 </script>
   </head>
   <body>
